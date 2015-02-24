@@ -1,7 +1,7 @@
 Sentiment analysis project 
 ==========================
 
-Sentiment analysis and active learning algorithms. Entire code is written on Python.
+Sentiment analysis and active learning algorithms.
 
 Purpose of this project is to create active learning algoritms for sentiment analysis problem.
 The entire code is written on python.
