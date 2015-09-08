@@ -33,7 +33,7 @@ def download(cl, limit):
 con = sqlite3.connect('test.db')
 cur = con.cursor()
 
-cur.execute('drop table docs')
+cur.execute('DROP TABLE IF EXISTS docs')
 cur.execute('''
 	create table docs(
 		id integer primary key autoincrement,
@@ -41,7 +41,7 @@ cur.execute('''
 		class text
 	)
 	''')
-
+cur.execute('CREATE UNIQUE INDEX index_name ON docs (text);')
 limit = 300
 
 texts_pos = download('good', limit)
